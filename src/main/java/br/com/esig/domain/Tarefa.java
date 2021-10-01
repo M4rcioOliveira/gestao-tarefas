@@ -9,8 +9,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-import br.com.esig.domain.enums.Prioridade;
-import br.com.esig.domain.enums.Responsavel;
+import br.com.esig.enums.Prioridade;
+import br.com.esig.enums.Responsavel;
 
 
 @Entity

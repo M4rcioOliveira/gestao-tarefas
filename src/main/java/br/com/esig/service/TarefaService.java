@@ -1,4 +1,4 @@
-package br.com.esig.domain.repository.service;
+package br.com.esig.service;
 
 import java.util.List;
 
@@ -8,8 +8,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import br.com.esig.domain.Tarefa;
-import br.com.esig.domain.enums.Responsavel;
-import br.com.esig.domain.repository.TarefaRepository;
+import br.com.esig.enums.Responsavel;
+import br.com.esig.repository.TarefaRepository;
 
 
 @Service
@@ -73,15 +73,22 @@ public class TarefaService {
 
 	public ResponseEntity<List<Tarefa>> findByResponsavel(String responsavel){
 		
-		return new ResponseEntity<List<Tarefa>>(tarefaRepository.findByResponsavel(responsavel), HttpStatus.OK);
+		String responsavelToUpperCase = responsavel.toUpperCase();
+		
+		return new ResponseEntity<List<Tarefa>>(tarefaRepository.findByResponsavel(responsavelToUpperCase), HttpStatus.OK);
 		
 	}
 	
 	public ResponseEntity<List<Tarefa>> findByPrioridade(String prioridade){
 		
-		return new ResponseEntity<List<Tarefa>>(tarefaRepository.findByPrioridade(prioridade), HttpStatus.OK);
+		String prioridadeToUpperCase = prioridade.toUpperCase();
+		
+		return new ResponseEntity<List<Tarefa>>(tarefaRepository.findByPrioridade(prioridadeToUpperCase), HttpStatus.OK);
 		
 	}
+
+	
+
 
 	
 

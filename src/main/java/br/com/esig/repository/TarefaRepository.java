@@ -1,4 +1,4 @@
-package br.com.esig.domain.repository;
+package br.com.esig.repository;
 
 import java.util.List;
 
@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import br.com.esig.domain.Tarefa;
-import br.com.esig.domain.enums.Responsavel;
+import br.com.esig.enums.Responsavel;
 
 
 @Repository

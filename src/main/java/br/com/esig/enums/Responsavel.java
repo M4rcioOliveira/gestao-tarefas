@@ -1,4 +1,4 @@
-package br.com.esig.domain.enums;
+package br.com.esig.enums;
 
 public enum Responsavel {
 	
